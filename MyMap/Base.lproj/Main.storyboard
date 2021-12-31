@@ -28,6 +28,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HlL-Ty-BPU">
                                 <rect key="frame" x="0.0" y="84" width="414" height="812"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfX-ik-KhO">
+                                <rect key="frame" x="353" y="823" width="45" height="31"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="changeMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80W-p7-LF6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,6 +44,8 @@
                             <constraint firstAttribute="bottom" secondItem="HlL-Ty-BPU" secondAttribute="bottom" id="QgQ-il-6US"/>
                             <constraint firstItem="Rd2-rc-MHN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VMY-W6-4m8"/>
                             <constraint firstItem="Rd2-rc-MHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VrL-rH-ffb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfX-ik-KhO" secondAttribute="trailing" constant="16" id="YgE-h6-GAI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfX-ik-KhO" secondAttribute="bottom" constant="8" id="c0y-PZ-TDP"/>
                             <constraint firstItem="HlL-Ty-BPU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fJg-s8-lUH"/>
                             <constraint firstItem="Rd2-rc-MHN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fXU-aK-1eW"/>
                             <constraint firstItem="HlL-Ty-BPU" firstAttribute="top" secondItem="Rd2-rc-MHN" secondAttribute="bottom" id="i8S-BO-vth"/>

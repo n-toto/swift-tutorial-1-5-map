@@ -16,10 +16,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.delegate = self
     }
 
-
     @IBOutlet weak var inputText: UITextField!
     
     @IBOutlet weak var dispMap: MKMapView!
+    
+    @IBAction func changeMapButton(_ sender: Any) {
+        switch dispMap.mapType {
+        case .standard:
+            dispMap.mapType = .satellite
+        case .satellite:
+            dispMap.mapType = .hybrid
+        case .hybrid:
+            dispMap.mapType = .satelliteFlyover
+        case .satelliteFlyover:
+            dispMap.mapType = .hybridFlyover
+        case .hybridFlyover:
+            dispMap.mapType = .mutedStandard
+        default:
+            dispMap.mapType = .standard
+        }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
